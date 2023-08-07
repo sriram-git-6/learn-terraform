@@ -15,3 +15,15 @@ variable "fruits_with_stock" {
 output "fruits_with_stock"{
   value = try(var.fruits_with_stock["banana"],0)
 }
+
+variable "fruit_stock"{
+  default = {
+    apple = {
+        stock = 100
+    }
+  }
+}
+
+output "fruit_stock"{
+  value = lookup(var.fruit_stock["apple"],"price", 2) # this lookup function searches for price value of apple
+}
