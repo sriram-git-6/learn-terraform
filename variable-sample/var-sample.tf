@@ -60,7 +60,12 @@ variable "fruit_details"{
   }
 }
 
+#output "fruit_details" {
+#  value = "apple stock = ${var.fruit_details.apple.stock}, apple type = ${var.fruit_details.apple.type}, apple sale status = ${var.fruit_details.apple.for_sale}"
+
+#}
+
 output "fruit_details" {
-  value = "apple stock = ${var.fruit_details.apple.stock}, apple type = ${var.fruit_details.apple.type}, apple sale status = ${var.fruit_details.apple.for_sale}"
+  value = "apple stock = var.fruit_details.apple.stock, apple type = var.fruit_details.apple.type, apple sale status = var.fruit_details.apple.for_sale"
 
 }
