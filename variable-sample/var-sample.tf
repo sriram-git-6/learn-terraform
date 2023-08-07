@@ -1,17 +1,17 @@
-variable "fruit_name"{
-  default = "apple"
-}
-output "fruit_name" {
-  value = var.fruit_name
-}
+#variable "fruit_name"{
+#  default = "apple"
+#}
+#output "fruit_name" {
+#  value = var.fruit_name
+#}
 
 # list variable
-#variable "fruits"{
-#  default = [ "apple", "banana" ]
-#}
-#output "fruits" {
-#  value = [var.fruits[0], var.fruits[1]]
-#}
+variable "fruits"{
+  default = [ "apple", "banana" ]
+}
+output "fruits" {
+  value = [var.fruits[0], var.fruits[1]]
+}
 
 # map variable, plain
 #variable "fruit_stock" {
