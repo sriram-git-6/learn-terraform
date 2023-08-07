@@ -20,7 +20,7 @@ variable "fruit_stock" {
     banana = 50
   }
 }
-output "fruit_stock" {
+output "fruit_stock_apple" {
   value = var.fruit_stock["apple"]
 }
 
