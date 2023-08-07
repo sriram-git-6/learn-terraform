@@ -21,7 +21,7 @@ variable "fruit_stock" {
   }
 }
 output "fruit_stock" {
-  value = "var.fruit_stock.apple"
+  value = var.fruit_stock
 }
 
 #map variable, map of maps
@@ -38,5 +38,5 @@ output "fruit_stock" {
 #  }
 #}
 #output "fruit_stock_price" {
-#  value = "var.fruit_stock_price"
+#  value = var.fruit_stock_price
 #}
