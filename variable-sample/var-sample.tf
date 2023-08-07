@@ -13,7 +13,7 @@
 #  value = [var.fruits[0], var.fruits[1]]
 #}
 
-# map variable, plain
+## map variable, plain
 variable "fruit_stock" {
   default = {
     apple = 100
