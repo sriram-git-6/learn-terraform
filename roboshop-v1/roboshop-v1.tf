@@ -7,6 +7,9 @@ variable "instance_type" {
 variable "security_group" {
   default = [ "sg-01c1b8d157ecd6541" ]
 }
+variable "zone_id" {
+  default = "Z0998112HZIX8T6VH3JX"
+}
 variable "components" {
   default = {
     frontend = { name = "frontend-dev" }
@@ -32,17 +35,17 @@ resource "aws_instance" "instance" {
   }
 }
 
-output "instances" {
-  value = aws_instance.instance
-}
+#output "instances" {
+#  value = aws_instance.instance
+#}
 
  resource "aws_route53_record" "record" {
   for_each = var.components
-  zone_id = "Z0998112HZIX8T6VH3JX"
-  name    = "${lookup(each.value, "name", null)} .devops746.online"
+  zone_id = var.zone_id
+  name    = "${lookup(each.value, "name", null)}.devops746.online"
   type    = "A"
   ttl     = 30
-  records = [lookup(lookup(aws_instance.instance, each.key, null),"private_ip", null)]
+  records = [lookup(lookup(aws_instance.instance, each.key, null), "private_ip", null)]
 }
 
 
