@@ -1,4 +1,4 @@
-data "aws_ami_id's" "ami"{
+data "aws_ami_ids" "ami"{
   name_regex = "Centos.*"
   owners = ["777414146682"]
     }
