@@ -1,5 +1,5 @@
 module "test" {
-  source = "local-module"
+  source = "./local-module"
 }
 
 output "test" {
