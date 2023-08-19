@@ -8,9 +8,9 @@ output "ami" {
   value = data.aws_ami.ami
 }
 
-resource "aws_instance" "instance" {
-  ami = data.aws_ami.ami.id
-  instance_type = "t3.small"
-  vpc_security_group_ids = [ "sg-01c1b8d157ecd6541" ]
-
-}
+#resource "aws_instance" "instance" {
+#  ami = data.aws_ami.ami.id
+#  instance_type = "t3.small"
+#  vpc_security_group_ids = [ "sg-01c1b8d157ecd6541" ]
+#
+#}
