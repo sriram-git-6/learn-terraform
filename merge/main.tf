@@ -22,6 +22,6 @@ variable vpc {
   }
 
 output "vpc" {
-  value = var.vpc["main"]["subnets"]
+  value = var.vpc.main.subnets
 }
 
